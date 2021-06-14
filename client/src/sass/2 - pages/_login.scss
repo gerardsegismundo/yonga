@@ -3,7 +3,6 @@
 
   @include media('>phone') {
     padding: 3rem 0;
-    @include absCenter;
   }
 
   .login-heading {
