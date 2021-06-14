@@ -1,0 +1,52 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      display: flex;
+      padding: 0 1rem;
+
+      &.cart {
+        @include media('>phone') {
+          position: relative;
+        }
+
+        .badge {
+          pointer-events: none;
+          background-color: $color-dark-1;
+          z-index: 2;
+          border: 1px solid white;
+          border-radius: 100%;
+          padding: 1px 4.5px;
+          color: $white;
+          position: absolute;
+          transform: translate(10px, 10px);
+          font-size: 10px;
+        }
+      }
+
+      &.menu {
+        font-size: 15px;
+        overflow: hidden;
+        height: 20px;
+        cursor: pointer;
+
+        .wrapper {
+          .menu-text-closed,
+          .menu-text-opened {
+            transform: translateY(-100%);
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

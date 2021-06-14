@@ -1,0 +1,278 @@
+.checkout {
+  @include container;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    h2 {
+      color: $color-dark;
+      font-size: 1.25rem;
+    }
+  }
+
+  form {
+    flex: 1 1 40rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .billing-details--input-group {
+      flex: 1 1 20rem;
+      padding: 1rem;
+    }
+
+    .additional-information {
+      flex: 1 1 20rem;
+      padding: 1rem;
+
+      h2 {
+        margin-bottom: 2.7rem;
+      }
+    }
+  }
+
+  .your-order {
+    flex: 1 1 20rem;
+    border: $light-border;
+    padding: 0 1.75rem;
+    margin: 1rem;
+
+    h2.your-order-header {
+      margin: 1.5rem 0 1.25rem 0;
+    }
+
+    table {
+      border-spacing: 0;
+      padding-top: 1.5rem;
+      border-top: $light-border;
+      width: 100%;
+      line-height: 1.75rem;
+
+      thead {
+        tr {
+          th {
+            padding-bottom: 0.5rem;
+            border-bottom: $dark-border;
+          }
+        }
+      }
+
+      thead th:first-of-type {
+        text-align: left;
+      }
+
+      thead tr th:nth-of-type(2),
+      tbody tr td:nth-of-type(2),
+      tfoot tr td:nth-of-type(2) {
+        text-align: right;
+      }
+
+      tbody {
+        tr {
+          td {
+            color: $color-dark-3;
+            text-transform: capitalize;
+          }
+
+          &:first-of-type {
+            td {
+              padding-top: 1rem;
+            }
+          }
+
+          &:nth-last-child(2) {
+            td {
+              padding-bottom: 1rem;
+            }
+          }
+
+          &:last-of-type {
+            td {
+              border-top: $dark-border;
+              padding: 1rem 0;
+            }
+          }
+        }
+      }
+
+      tfoot {
+        tr.shipping {
+          th {
+            text-align: left;
+            vertical-align: top;
+          }
+
+          td {
+            text-align: right;
+
+            ul {
+              li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                font-size: 0.8rem;
+                opacity: 0.75;
+
+                input {
+                  margin-left: 0.25rem;
+                }
+              }
+            }
+          }
+        }
+
+        tr {
+          td,
+          th {
+            padding: 0.5rem 0;
+            border-top: $dark-border;
+            text-transform: capitalize;
+            font-weight: 600;
+          }
+
+          bdi {
+            color: rgba($color-dark, 1);
+          }
+        }
+      }
+    }
+
+    .confirm-btn {
+      margin: 2rem 0;
+      height: 45px;
+      min-height: 30px;
+      max-height: 55px;
+      max-width: 15rem;
+    }
+
+    .after-confirm-wrapper {
+      &[data-is-disabled='false'] {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+
+      .payment-header {
+        margin: 2rem 0 1.5rem 0;
+        padding-bottom: 1rem;
+        border-bottom: $light-border;
+      }
+
+      ul.payment-options {
+        margin-bottom: 2rem;
+        li {
+          margin: 1rem 0;
+          display: flex;
+          position: relative;
+          flex-wrap: wrap;
+
+          input[type='radio'] {
+            margin-right: 0.5rem;
+
+            &:checked {
+              & + label + div.po-box {
+                opacity: 1;
+                max-height: 10rem;
+                margin-top: 1rem;
+                padding: 1rem;
+                transition: margin-top 0.3s ease-out, max-height 0.5s ease-out,
+                  opacity 0.3s ease 0.1s;
+              }
+            }
+          }
+
+          div.po-box {
+            width: 100%;
+            background-color: rgba($color-dark-5, 0.2);
+            border: 1px solid rgba($color-dark-5, 0.5);
+            color: $color-dark-2;
+            height: auto;
+            opacity: 0;
+            max-height: 0;
+            pointer-events: none;
+
+            &:last-of-type {
+              img {
+                height: 50px;
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .input-group {
+        display: flex;
+        align-items: top;
+
+        input[type='checkbox'] {
+          margin-right: 0.5rem;
+          flex-shrink: 0;
+        }
+
+        label[for='agreement'] {
+          line-height: 1.3rem;
+          transform: translateY(-0.15rem);
+        }
+      }
+
+      // Paypal and submit btn wrapper
+      .btn-wrapper {
+        overflow: hidden;
+        width: 10rem;
+        position: relative;
+        background-color: $color-darker;
+        margin: 2rem 0 1.5rem 0;
+
+        padding: 0;
+        height: 45px;
+        min-height: 30px;
+        max-height: 55px;
+
+        > * {
+          cursor: pointer;
+        }
+
+        label {
+          color: white;
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          left: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .paypal-wrapper > * {
+          opacity: 0;
+          height: 100%;
+          width: 100%;
+          max-width: 15rem;
+          overflow: hidden;
+          height: inherit;
+
+          > * {
+            width: 100%;
+            height: 40rem;
+          }
+        }
+
+        button[type='submit'] {
+          display: block;
+
+          color: $white;
+          padding: 1rem 2rem;
+        }
+      }
+
+      button.cancel-btn {
+        width: 10rem;
+        height: 45px;
+        min-height: 30px;
+        max-height: 55px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

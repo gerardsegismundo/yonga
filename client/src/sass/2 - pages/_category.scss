@@ -1,0 +1,64 @@
+.category {
+  @include container;
+  padding-top: 2rem;
+
+  .category-header {
+    @include media('>phone') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .category-heading {
+      color: $color-dark-1;
+      margin-bottom: 0.4rem;
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    .category-info {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: $color-dark-4;
+
+      @include media('>phone') {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+    }
+
+    .Dropdown-root {
+      @include media('>phone') {
+        // max-width: 20rem;
+        grid-area: 1 / 2 / 4 / 3;
+        justify-self: end;
+        align-self: center;
+        width: 20rem;
+      }
+    }
+  }
+
+  select {
+    background-color: $color-dark-5;
+    color: $color-darker;
+    border: none;
+    margin-bottom: 1rem;
+
+    option {
+      border: none;
+    }
+  }
+
+  ol.category-results {
+    margin: 2rem auto 8rem auto;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+    @include media('>tablet') {
+      grid-gap: 2vw;
+    }
+  }
+}

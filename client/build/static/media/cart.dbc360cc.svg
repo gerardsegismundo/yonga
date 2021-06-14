@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.48 409">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #343535;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 25px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M90.11,146.07V87.63A75.13,75.13,0,0,1,165.24,12.5h0a75.13,75.13,0,0,1,75.13,75.13v58.44" />
+  <path class="cls-1"
+    d="M267.89,396.5H62.59a50.09,50.09,0,0,1-49.78-55.62L40,96H290.46l27.21,244.9A50.09,50.09,0,0,1,267.89,396.5Z" />
+</svg>

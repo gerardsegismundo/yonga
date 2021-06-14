@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6af3ef71.chunk.css",
+    "main.js": "/static/js/main.e7f3e79b.chunk.js",
+    "main.js.map": "/static/js/main.e7f3e79b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8f49b074.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8f49b074.js.map",
+    "static/css/2.8340a66f.chunk.css": "/static/css/2.8340a66f.chunk.css",
+    "static/js/2.4800973b.chunk.js": "/static/js/2.4800973b.chunk.js",
+    "static/js/2.4800973b.chunk.js.map": "/static/js/2.4800973b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.8340a66f.chunk.css.map": "/static/css/2.8340a66f.chunk.css.map",
+    "static/css/main.6af3ef71.chunk.css.map": "/static/css/main.6af3ef71.chunk.css.map",
+    "static/js/2.4800973b.chunk.js.LICENSE.txt": "/static/js/2.4800973b.chunk.js.LICENSE.txt",
+    "static/media/camera.cefd604b.svg": "/static/media/camera.cefd604b.svg",
+    "static/media/cart-check.68fbd147.svg": "/static/media/cart-check.68fbd147.svg",
+    "static/media/cart-plus.3e5879c8.svg": "/static/media/cart-plus.3e5879c8.svg",
+    "static/media/cart.dbc360cc.svg": "/static/media/cart.dbc360cc.svg",
+    "static/media/children.7b5e4308.png": "/static/media/children.7b5e4308.png",
+    "static/media/circle-fullrate.752508c7.svg": "/static/media/circle-fullrate.752508c7.svg",
+    "static/media/circle-halfrate.540ca6fb.svg": "/static/media/circle-halfrate.540ca6fb.svg",
+    "static/media/circle-norate.a137131d.svg": "/static/media/circle-norate.a137131d.svg",
+    "static/media/close.7a6c0486.svg": "/static/media/close.7a6c0486.svg",
+    "static/media/hangingflowers.8bc6a8ef.png": "/static/media/hangingflowers.8bc6a8ef.png",
+    "static/media/home.3ff056f0.png": "/static/media/home.3ff056f0.png",
+    "static/media/notifications.css": "/static/media/notification.c5d9251e.ttf",
+    "static/media/outdoor.f6319e23.png": "/static/media/outdoor.f6319e23.png",
+    "static/media/user.de73dd13.svg": "/static/media/user.de73dd13.svg",
+    "static/media/wood.pattern.f91c765e.jpg": "/static/media/wood.pattern.f91c765e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f49b074.js",
+    "static/css/2.8340a66f.chunk.css",
+    "static/js/2.4800973b.chunk.js",
+    "static/css/main.6af3ef71.chunk.css",
+    "static/js/main.e7f3e79b.chunk.js"
+  ]
+}

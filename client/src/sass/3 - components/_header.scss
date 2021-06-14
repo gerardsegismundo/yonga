@@ -1,0 +1,41 @@
+header.main-header {
+  pointer-events: none;
+  width: 100%;
+  z-index: 9999;
+  background-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8) 40%,
+    rgba(255, 255, 255, 0.1) 90%
+  );
+
+  position: fixed;
+
+  @include media('>tablet') {
+    height: 10rem;
+    padding-top: 5rem;
+  }
+
+  .container {
+    @include container;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+
+    > * {
+      pointer-events: all;
+    }
+
+    .brand {
+      font: inherit;
+      font-family: $font-primary;
+      font-size: 2.5rem;
+      margin-right: auto;
+      font-weight: 400;
+      color: $color-dark;
+      text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+}

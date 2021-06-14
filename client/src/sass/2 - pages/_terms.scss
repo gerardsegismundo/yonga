@@ -1,0 +1,35 @@
+.terms {
+  @include container;
+
+  line-height: 2.1rem;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
+
+  .row {
+    width: 80vw;
+    margin: auto;
+    max-width: 70rem;
+    margin-bottom: 2rem;
+    // grid-template: 3fr 1fr / 1fr 2fr;
+
+    @include media('>tablet') {
+      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template: 3fr 1fr / 1fr 1fr;
+    }
+
+    > * {
+      padding: 0.25rem;
+
+      @include media('>tablet') {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      grid-column-start: 2;
+      align-self: end;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "yonga",
+  "version": "1.0.0",
+  "description": "Ecommerce website using MERN stack",
+  "main": "index.js",
+  "author": "Gerard Martin R. Segismundo <gerardmartinsegismundo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run start --prefix client",
+    "clientinstall": "npm run --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node server/seeder",
+    "data:destroy": "node server/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.23.0",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-async-handler": "^1.1.4",
+    "express-fileupload": "^1.2.0",
+    "express-mongo-sanitize": "^2.0.0",
+    "googleapis": "^62.0.0",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.11",
+    "nodemailer": "^6.4.14",
+    "uuid": "^8.3.1",
+    "xss-clean": "^0.1.1"
+  },
+  "engines": {
+    "node": "v14.13.1"
+  }
+}

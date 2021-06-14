@@ -1,0 +1,112 @@
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md-lg {
+    // Medium-Large devices (882px and up)
+    @media (min-width: 882px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      @content;
+    } //1800
+  }
+
+  @if $breakpoint == xl {
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin customScroll {
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: rgba($color-dark, 0.04) !important;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color-dark, 0.2) !important;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin underlineOnHover {
+  position: relative;
+
+  &:after {
+    transition: all 0.3s;
+    content: '';
+    position: absolute;
+    width: 0%;
+    left: 0;
+    opacity: 0;
+    height: 2rem;
+    top: 50%;
+    transform-origin: left;
+    transform: translateY(-50%);
+    border-bottom: 2px solid $color-dark-1;
+  }
+
+  &:hover {
+    color: $color-darker;
+    &:after {
+      transform: translateY(-50%);
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}

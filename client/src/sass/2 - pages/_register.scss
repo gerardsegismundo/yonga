@@ -1,0 +1,71 @@
+.register {
+  color: $color-dark-1;
+  padding: 3rem 0;
+
+  @include absCenter;
+
+  @include media('>tablet') {
+    padding-top: 0;
+  }
+
+  .register-heading {
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-dark-1;
+  }
+
+  .register-form {
+    margin: 3rem 10vw;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media('>tablet') {
+      margin: 3rem auto;
+    }
+
+    label {
+      letter-spacing: 0.1rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &:not([for='name']) {
+        margin-top: 1rem;
+      }
+    }
+
+    input {
+      background-color: transparent;
+      border-radius: 1px;
+      color: $color-dark;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba($color-dark-5, 0.9);
+      width: 40.5rem;
+      max-width: 80vw;
+
+      &:focus,
+      &:active {
+        border: 1px solid rgba($color-dark-3, 0.9);
+      }
+    }
+
+    button,
+    a.btn {
+      padding: 0.75rem 1.2rem;
+      border-radius: 1px;
+      width: fit-content;
+      margin: auto;
+
+      &.return-btn {
+        margin-top: 2rem;
+        text-align: center;
+      }
+    }
+
+    .register-btn {
+      margin-top: 4rem;
+    }
+  }
+}

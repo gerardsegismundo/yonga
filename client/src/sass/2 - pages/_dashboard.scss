@@ -1,0 +1,138 @@
+.dashboard {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+
+  min-height: 80vh;
+  nav {
+    flex: 2 1 5rem;
+    min-width: fit-content;
+    padding-right: 5rem;
+
+    .avatar {
+      margin-bottom: 2rem;
+
+      height: 12rem;
+      width: 12rem;
+      position: relative;
+
+      img {
+        transition: opacity 0.3s;
+        border-radius: 50%;
+        height: 12rem;
+        width: 12rem;
+        pointer-events: none;
+      }
+
+      .input-group {
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        margin-left: auto;
+        right: 16px;
+        bottom: 16px;
+
+        // camera icon label wrapper
+        label[for='avatar'].lb-2 {
+          opacity: 0.95;
+          transition: all 0.3s;
+          background-color: rgba($color-dark-6, 0.95);
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 3px solid $white;
+
+          svg {
+            // opacity: 0.9;
+            fill: $color-dark-1;
+          }
+        }
+
+        input[name='avatar'] {
+          display: none;
+        }
+      }
+
+      &:hover {
+        label[for='avatar'].lb-2 {
+          transform: scale(1.1);
+          opacity: 1;
+          background-color: rgba($white, 1);
+          border: 1px solid $color-dark-1;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      li {
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 1rem 0;
+
+        a {
+          color: $color-dark-4;
+          transition: 0.3s;
+          position: relative;
+
+          &.active {
+            color: $color-darker;
+            opacity: 1;
+          }
+
+          &:hover {
+            color: $color-dark-1;
+          }
+        }
+
+        .logout-btn {
+          padding: 0;
+          font-size: inherit;
+          font-family: inherit;
+          color: $color-dark-4;
+
+          &:hover {
+            color: $color-dark-1;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 3 1 30rem;
+  }
+
+  // .orders {
+  // }
+
+  .account-details {
+    h2 {
+      text-transform: capitalize;
+    }
+
+    .note {
+      margin-top: 1rem;
+    }
+
+    // reset password link
+    .btn {
+      display: block;
+      width: fit-content;
+      margin-top: 2rem;
+    }
+  }
+
+  form.address {
+    .save-btn {
+      margin: 3rem 0 6rem 0;
+    }
+  }
+}

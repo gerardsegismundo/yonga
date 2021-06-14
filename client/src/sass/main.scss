@@ -1,0 +1,46 @@
+// 1 - BASE
+@import './1\ -\ base/variables';
+@import './1\ -\ base/mixins';
+@import './1\ -\ base/breakpoints';
+@import './1\ -\ base/base';
+
+// 2 - PAGES
+@import './2\ -\ pages/about';
+@import './2\ -\ pages/cart';
+@import './2\ -\ pages/category';
+@import './2\ -\ pages/checkout';
+@import './2\ -\ pages/contact';
+@import './2\ -\ pages/dashboard';
+@import './2\ -\ pages/forgotpassword';
+@import './2\ -\ pages/home';
+@import './2\ -\ pages/login';
+@import './2\ -\ pages/order-received';
+@import './2\ -\ pages/product';
+@import './2\ -\ pages/register';
+@import './2\ -\ pages/resetpassword';
+@import './2\ -\ pages/terms';
+
+// 3 - COMPONENTS
+@import './3\ -\ components/dark-overlay';
+@import './3\ -\ components/header';
+@import './3\ -\ components/landing-image';
+@import './3\ -\ components/latest-items';
+@import './3\ -\ components/news-letter';
+@import './3\ -\ components/categories';
+@import './3\ -\ components/product-item';
+@import './3\ -\ components/navigation';
+@import './3\ -\ components/nav-menu';
+@import './3\ -\ components/cart-menu';
+@import './3\ -\ components/news-letter-form';
+@import './3\ -\ components/social-icons';
+@import './3\ -\ components/footer';
+@import './3\ -\ components/billing-details-input-group';
+@import './3\ -\ components/comment-section';
+@import './3\ -\ components/upload-modal';
+@import './3\ -\ components/confirm-modal';
+@import './3\ -\ components/cart-is-empty';
+
+// 4 - CUSTOM
+
+@import './4\ -\ custom/custom-input';
+@import './4\ -\ custom/custom-textarea';

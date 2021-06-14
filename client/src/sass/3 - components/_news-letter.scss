@@ -1,0 +1,118 @@
+.news-letter {
+  margin-top: 2rem;
+  background-color: $color-dark;
+  color: $white;
+  transform: translateY(4.1rem);
+
+  @include media('>tablet') {
+    padding: 1vw 0;
+    transform: translateY(9rem);
+  }
+
+  .wrapper {
+    padding: 4rem 0 6.5rem 0;
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+
+    section {
+      // transform: translateY(-50%);
+      flex: 1 1 30rem;
+
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    form {
+      flex: 1 1 30rem;
+      margin-top: 3rem;
+
+      .input-group {
+        // border: 2px solid green;
+        height: 30px;
+        position: relative;
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          color: $white;
+          outline: none;
+          border: 0;
+          height: 100%;
+          font-size: 1rem;
+          padding-bottom: 0.5rem;
+
+          &::placeholder {
+            transition: 0.3s;
+          }
+
+          &.is-active,
+          &:active,
+          &:focus {
+            &::placeholder {
+              opacity: 0;
+            }
+
+            & + label {
+              opacity: 1;
+              transform: translate(0, -2rem);
+
+              & + .underline:before {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        label {
+          opacity: 0;
+          bottom: 10px;
+          font-size: 0.9rem;
+          transition-delay: 0.1s;
+          transform-origin: left;
+          transform: translate(-0.5rem, -2rem);
+          transition: 0.5s;
+          // font-size: 0.7rem;
+          // transform: scale(1.5);
+          pointer-events: none;
+          position: absolute;
+          left: 0;
+        }
+
+        span.underline {
+          height: 2px;
+          width: 100%;
+          color: $white;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          min-width: 30px;
+          background-color: $color-dark-2;
+
+          &:before {
+            content: '';
+            width: 0%;
+            position: absolute;
+            height: 2px;
+            background-color: $white;
+            transition: width 0.3s ease-out;
+          }
+        }
+      }
+
+      button {
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding: 1rem 2.25rem;
+        display: block;
+        background-color: $color-darker;
+      }
+    }
+  }
+}
